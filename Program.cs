@@ -1,28 +1,12 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
 namespace vergiHesap
 {
     internal class Program
     {
-        /*public int para, vergi;
-        public class dilim
-        {
-            private float alt, ust, yuzde;
-            private dilim(float Alt,float Ust,float Yuzde)
-            {
-                alt = Alt;
-                ust = Ust;
-                yuzde = Yuzde;
-            }
-            public float faizDondur(int Para)
-            {
-                return (Para - alt) * yuzde / 100;
-            }
-        }*/
         static void Main(string[] args)
         {
             Console.Write("Lütfen yapacaginiz islem sayisini giriniz: ");
@@ -34,11 +18,7 @@ namespace vergiHesap
             {
                 Console.Write("Lütfen yapmak istediginiz islemi giriniz: ");
                 dizi[i] = Console.ReadLine();
-                // for (int j = 0; j < islemSayisi; j++) Console.WriteLine(dizi[j]);
             }
-
-            
-
             while (true)
             {
                 Console.Clear();
@@ -55,19 +35,12 @@ namespace vergiHesap
                         if (dizi[j].Substring(k, 1) == "%") islemTur += 2;
                         if (dizi[j].Substring(k, 1) == "/") islemTur += 1;
                         if (dizi[j].Substring(k, 1) == "V"|| dizi[j].Substring(k, 1) == "v") islemTur += 6;
-                        //Console.WriteLine(dizi[j].Substring(k, 1));
-                        //Console.WriteLine(islemTur);
-
                     }
-                    //Console.WriteLine(islemTur);
-
                     int slash1 = 0, slash2 = 0; float oran = 0, altS = 0, ustS = 0;
                     switch (islemTur)
                     {
                         case 1:
                             para += float.Parse(dizi[j].Substring(1));
-                            //Console.WriteLine(para);
-                            //Console.ReadKey();
                             break;
                         case 2:
                             para -= float.Parse(dizi[j].Substring(1));
@@ -123,8 +96,6 @@ namespace vergiHesap
                         default:
                             break;
                     }
-                    //Console.WriteLine(para);
-                    //Console.ReadKey();
                 }
                 Console.Clear();
                 Console.WriteLine("Yapilan islemler");
